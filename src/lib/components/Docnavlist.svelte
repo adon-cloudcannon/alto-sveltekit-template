@@ -19,8 +19,6 @@
         else
             non_root_pages[page.nav_section].push(page)
     })
-
-    console.log(non_root_pages)
 </script>
 
 <ol class="docnav-list">
