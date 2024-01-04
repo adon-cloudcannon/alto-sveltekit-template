@@ -24,9 +24,9 @@
             root.classList.add('light')
             root.classList.remove('dark')
         }
-
-    // shortcodes
-    import { diffcode } from '$lib/shortcodes/diffcode.js';
+    
+    //shortcodes
+    import Diffcode from '$lib/shortcodes/diffcode.svelte';
 
 </script>
 
