@@ -1,6 +1,6 @@
 import markdownIt from "markdown-it"
 import { utils } from 'markdown-it/lib/common/utils'
-import { hljs } from 'highlight.js' // https://highlightjs.org
+import hljs from 'highlight.js' // https://highlightjs.org
 
 export let diffcode = content => {
     let mainBlock = content.replace(/(^```.*)/mg, "");
