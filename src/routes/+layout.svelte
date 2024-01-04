@@ -25,6 +25,9 @@
             root.classList.remove('dark')
         }
 
+    // shortcodes
+    import { diffcode } from '$lib/shortcodes/diffcode.js';
+
 </script>
 
 <svelte:head>

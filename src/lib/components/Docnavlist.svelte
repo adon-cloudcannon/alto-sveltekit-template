@@ -1,4 +1,5 @@
 <script>
+    import { page } from '$app/stores';  
     const paths = import.meta.glob('/src/pages/**/*.md', { eager: true })
     let navigation = []
     let homepage = {}
@@ -26,11 +27,11 @@
 </script>
 
 <ol class="docnav-list">
-    <li class="active"> <!-- TODO make the right one active -->
+    <li class="{$page.url.pathname === '/' ? 'active' : ''}">
         <a href="/">{ homepage.nav_title }</a>
     </li>
     {#each root_pages as nav}
-        <li>
+        <li class="{$page.url.pathname === nav.permalink ? 'active' : ''}">
             <a href="{nav.permalink}">{nav.title}</a>
         </li>
     {/each}
@@ -39,7 +40,7 @@
         <p class="docnav-title">{key}</p>
         <ol class="docnav-list">
         {#each items as nav}
-            <li>
+            <li class="{$page.url.pathname === nav.permalink ? 'active' : ''}">
                 <a href="{nav.permalink}">{nav.title}</a>
             </li>
         {/each}

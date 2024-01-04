@@ -19,5 +19,8 @@
 		"svelte-preprocess": "^5.1.1",
 		"vite": "^4.4.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"highlight.js": "^11.9.0"
+	}
 }
