@@ -1,29 +1,31 @@
 <script>
+    import '$lib/styles/site.scss';
+
     import Banner from '$lib/components/Banner.svelte';
     import Nav from '$lib/components/Nav.svelte';
     import Docnav from '$lib/components/Docnav.svelte';
     import Footer from '$lib/components/Footer.svelte';
 
+    import {favicon, project_name, default_og_image} from '@data/meta.json';
+
+    import mode from '$lib/shared/stores/mode';
     import { onMount } from 'svelte';
-    import { browser } from '$app/environment';
-    import Docnavlist from '$lib/components/Docnavlist.svelte';
+    let root;
 
-    let favicon = {};
-    let project_name;
-    let default_og_image;
+    onMount( () => {
+        root = document.body;        
+    })
 
-    onMount(async () => {
-        if (browser) {       
-            const meta_response = await fetch(`/meta.json`);
-            const meta = await meta_response.json();
-            ({ favicon, project_name, default_og_image } = meta)           
+    $: if(root)
+        if($mode == 'dark'){
+            root.classList.remove('light')
+            root.classList.add('dark')
+        } else {
+            root.classList.add('light')
+            root.classList.remove('dark')
         }
-    });	
-</script>
 
-<style lang="scss" global>
-    @import '../sass/site.scss';
-</style>
+</script>
 
 <svelte:head>
     <meta charset="UTF-8">

@@ -1,17 +1,5 @@
-<script>
-    import { onMount } from 'svelte';
-    import { browser } from '$app/environment';
-
-    let footer_width;
-    let footer_links = [];
-
-    onMount(async () => {
-        if (browser) {
-            const response = await fetch(`/footer.json`);
-            const footer = await response.json();
-            ({ footer_width, footer_links } = footer)            
-        }
-    });	
+<script>  
+    import { footer_width, footer_links } from '@data/footer'
 </script>
 
 <footer style="{ footer_width === "contain" ? "max-width:1000px" : ""}">

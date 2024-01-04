@@ -1,6 +1,21 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
-export default defineConfig({
-	plugins: [sveltekit()]
-});
+const config = {
+	plugins: [sveltekit()],
+	resolve: {
+		alias: {
+			$vendor: resolve('./static/vendor/'),
+			'@content': resolve('./content/'),
+			'@data': resolve('./data/'),
+		}
+	},
+	server: {
+		fs: {
+			// Allow serving files from one level up to the project root
+			allow: ['..'],
+		},
+	},
+};
+
+export default config;

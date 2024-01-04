@@ -3,10 +3,11 @@ $break: "max-width: 800px";
 @import "water";
 @import "code";
 @import "elements";
-@import "nav";
-@import "docnav";
-@import "banner";
+@import "components/nav";
+@import "components/docnav";
+@import "components/banner";
 @import "dark-styles";
+@import "variables";
 
 
 :root {
