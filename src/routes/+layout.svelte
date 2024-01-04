@@ -26,7 +26,7 @@
         }
     
     //shortcodes
-    import Diffcode from '$lib/shortcodes/diffcode.svelte';
+    //import Diffcode from '$lib/shortcodes/diffcode.svelte';
 
 </script>
 
