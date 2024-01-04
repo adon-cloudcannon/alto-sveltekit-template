@@ -432,7 +432,7 @@ _inputs:
 
 _snippets:
   diffcode:
-    snippet: "<script>import Diffcode from '$lib/shortcodes/diffcode.svelte';</script><Diffcode lang='[[lang]]' inner='[[inner]]' />"
+    snippet: "<Diffcode lang='[[lang]]' inner='[[inner]]' />"
     params: 
       lang:
         parser: argument

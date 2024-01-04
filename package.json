@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"highlight.js": "^11.9.0"
+		"highlight.js": "^11.9.0",
+		"sveltekit-autoimport": "^1.7.1"
 	}
 }
