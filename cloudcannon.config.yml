@@ -432,7 +432,7 @@ _inputs:
 
 _snippets:
   diffcode:
-    snippet: "<Diffcode lang='[[lang]]' inner='[[inner]]' />"
+    snippet: "const inner = [[inner]].replaceAll('{','&lbrace;').replaceAll('}','&rbrace;'); <Diffcode lang='[[lang]]' inner='{inner}' />"
     params: 
       lang:
         parser: argument
