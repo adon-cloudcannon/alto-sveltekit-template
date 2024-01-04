@@ -432,7 +432,7 @@ _inputs:
 
 _snippets:
   diffcode:
-    snippet: '{ @html diffcode("\n```[[lang]][[inner]]```\n") }'
+    snippet: '{ @html diffcode(<br>```[[lang]][[inner]]```<br>") }'
     params: 
       lang:
         parser: argument
