@@ -7,8 +7,12 @@
         const file = paths[path]
         if(path == "/src/pages/index.md")
             homepage = file.metadata
-        else
+        else{
+            let permalink = path.replace("/src/pages", "")
+            permalink = permalink.replace(".md", "")
+            file.metadata.permalink = permalink
             navigation.push(file.metadata)
+        }
     }
     const root_pages = navigation.filter(x => x.nav_section === "Root").sort((a,b) => a.weight - b.weight)
     const _non_root_pages = navigation.filter(x => x.nav_section !== "Root").sort((a,b) => a.weight - b.weight)
@@ -27,7 +31,7 @@
     </li>
     {#each root_pages as nav}
         <li>
-            {nav.title}
+            <a href="{nav.permalink}">{nav.title}</a>
         </li>
     {/each}
 
@@ -36,7 +40,7 @@
         <ol class="docnav-list">
         {#each items as nav}
             <li>
-                {nav.title}
+                <a href="{nav.permalink}">{nav.title}</a>
             </li>
         {/each}
         </ol>
