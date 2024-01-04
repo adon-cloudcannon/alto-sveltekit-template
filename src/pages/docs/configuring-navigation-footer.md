@@ -8,7 +8,14 @@ draft: false
 ---
 You can easily configure Alto's Navigation and Footer items within CloudCannon, under Alto's **Site Settings**.
 
-{ @html diffcode("n```js```n") }
+{ @html diffcode("n```js
+new PagefindUI({
+    element: "#search",
++    mergeIndex: [{
++        bundlePath: "https://docs.example.com/_pagefind"
++    }]
+})
+```n") }
 
 ## Configuring the navigation
 
