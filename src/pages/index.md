@@ -2,7 +2,6 @@
 _schema: default
 title: Welcome 👋
 nav_title: Home
-weight: 1
 SEO_options:
   title:
   image:
@@ -27,7 +26,7 @@ Designed initially for open-source software, Alto has many built-in features to 
 
 * Optional announcement banner;
 
-* Styled with Sass;&nbsp;
+* Styled with Sass;
 
 * Optimized for editing and publishing on CloudCannon.
 
@@ -35,7 +34,7 @@ To get started with Alto, create a CloudCannon account and check out the [Gettin
 
 ## Showcase
 
-CloudCannon uses Alto as the documentation site template for our own open-source tools. Take a look at these sample sites to see what's possible with static documentation on Alto:&nbsp;
+CloudCannon uses Alto as the documentation site template for our own open-source tools. Take a look at these sample sites to see what's possible with static documentation on Alto:
 
 * <a href="https://pagefind.app/" target="_blank" rel="noopener">Pagefind</a>
 
