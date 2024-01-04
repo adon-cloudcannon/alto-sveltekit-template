@@ -8,10 +8,6 @@ draft: false
 ---
 You can easily configure Alto's Navigation and Footer items within CloudCannon, under Alto's **Site Settings**.
 
-<script>import Diffcode from '$lib/shortcodes/diffcode.svelte';</script><Diffcode lang='' inner='
-asdas
-' />
-
 ## Configuring the navigation
 
 You can edit the navigation title, add links, and a site logo.
